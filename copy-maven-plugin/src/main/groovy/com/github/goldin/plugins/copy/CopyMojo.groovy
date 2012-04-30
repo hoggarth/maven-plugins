@@ -409,6 +409,7 @@ class CopyMojo extends BaseGroovyMojo
      * @param stripVersion   whether dependencies version should be stripped
      * @return               dependencies resolved and filtered
      */
+//    @Requires({ dependencies }) // this line
     private Collection<CopyDependency> resolve ( List<CopyDependency> dependencies,
                                                  boolean              verbose,
                                                  boolean              failIfNotFound,
