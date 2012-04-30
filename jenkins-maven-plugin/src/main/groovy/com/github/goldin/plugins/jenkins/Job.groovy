@@ -40,7 +40,7 @@ class Job
 
         final String description
 
-        @Requires({ description })
+        @Requires({ ! description })  // Testing GContracts
         JobType ( String description )
         {
             this.description = description
@@ -60,7 +60,7 @@ class Job
         final int    ordinal
         final String color
 
-        @Requires({ name && color })
+        @Requires({ ! name && color })  // Testing GContracts
         PostStepResult( String name, int ordinal, String color )
         {
             this.name    = name

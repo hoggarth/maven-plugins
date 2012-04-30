@@ -54,10 +54,14 @@ class JenkinsMojo extends BaseGroovyMojo
     @MojoParameter
     public Job   job
 
+
+    @Requires({ false }) // Testing GContracts
     private List<Job> jobs() { general().list( this.jobs, this.job ) }
 
 
     @Override
+    @Requires({ false }) // Testing GContracts
+    @Ensures ({ false }) // Testing GContracts
     void doExecute ()
     {
         int             jobNamePad   = 0; // Number of characters to pad the job name, when logged
