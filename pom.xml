@@ -93,7 +93,11 @@
 
 
     <dependencies>
-        <!-- Occasionally required for Groovy compilation -->
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>${groovy-version}</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -175,9 +179,10 @@
                     </dependencies>
                 </plugin>
 
-                <!-- ~~~~~~~~~~~~~ -->
-                <!-- GMaven plugin -->
-                <!-- ~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~~~~~ -->
+                <!-- GMaven plugin       -->
+                <!-- http://goo.gl/kNc7g -->
+                <!-- ~~~~~~~~~~~~~~~~~~~ -->
 
                 <plugin>
                     <groupId>org.codehaus.gmaven</groupId>
@@ -185,20 +190,9 @@
                     <version>${gmaven-version}</version>
                     <configuration>
                         <providerSelection>2.0</providerSelection>
-                        <source />
+                        <sourceEncoding>UTF-8</sourceEncoding>
                     </configuration>
                     <dependencies>
-                        <dependency>
-                            <groupId>org.codehaus.gmaven.runtime</groupId>
-                            <artifactId>gmaven-runtime-2.0</artifactId>
-                            <version>${gmaven-version}</version>
-                            <exclusions>
-                                <exclusion>
-                                    <groupId>org.codehaus.groovy</groupId>
-                                    <artifactId>groovy-all</artifactId>
-                                </exclusion>
-                            </exclusions>
-                        </dependency>
                         <dependency>
                             <groupId>org.codehaus.groovy</groupId>
                             <artifactId>groovy-all</artifactId>

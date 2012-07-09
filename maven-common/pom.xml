@@ -235,15 +235,8 @@
         </dependency>
 
         <!-- ~~~~~~~~~~~~~~~~~~~ -->
-        <!-- org.codehaus.groovy -->
+        <!-- org.codehaus.gmaven -->
         <!-- ~~~~~~~~~~~~~~~~~~~ -->
-
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>${groovy-version}</version>
-            <scope>compile</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.codehaus.gmaven</groupId>
